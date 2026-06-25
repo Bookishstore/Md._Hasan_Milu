@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advocate Md Hasan Milu | Legal & Business Advisory</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FAF8F2;
+    color:#2C2C2C;
+    line-height:1.7;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#3B2F2F;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#B68D40;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(
+    135deg,
+    #F8F5EE,
+    #EEE8DC
+    );
+    padding:120px 10%;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:55px;
+    color:#3B2F2F;
+    margin-bottom:10px;
+}
+
+.hero-text h2{
+    color:#B68D40;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#B68D40;
+    color:white;
+    padding:14px 32px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#9D7630;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:380px;
+    max-width:100%;
+    border-radius:20px;
+    border:6px solid white;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* Sections */
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#3B2F2F;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* About */
+
+.about-content{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-content img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about-text p{
+    margin-bottom:15px;
+}
+
+/* Services */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#3B2F2F;
+    margin-bottom:15px;
+}
+
+/* Contact */
+
+.contact{
+    background:#F3EEE4;
+}
+
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-box p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.contact-box a{
+    color:#B68D40;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.whatsapp-btn{
+    display:inline-block;
+    background:#25D366;
+    color:#fff !important;
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    border:none;
+    opacity:1;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#1EBE5D;
+    transform:translateY(-2px);
+}
+
+/* Footer */
+
+footer{
+    background:#3B2F2F;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:38px;
+}
+
+.hero{
+    text-align:center;
+}
+
+.about-content{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            Advocate Hasan Milu
+        </div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Practice Areas</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <h1>Advocate Md Hasan Milu</h1>
+
+            <h2>Consultant | Legal & Business Advisory</h2>
+
+            <p>
+                Trusted legal and business advisor providing professional
+                solutions in Civil Law, Criminal Law, Income Tax,
+                Customs, VAT, Audit, Company Law, Property Management,
+                Legal Drafting, Immigration and Business Consultancy.
+            </p>
+
+            <a href="#contact" class="btn">
+                Book Consultation
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="hasan-milu.jpg" alt="Advocate Md Hasan Milu">
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="section-title">
+        <h2>About Advocate Hasan Milu</h2>
+        <p>Professional Legal & Business Consultant</p>
+    </div>
+
+    <div class="about-content">
+
+        <img src="hasan-milu.jpg" alt="Advocate">
+
+        <div class="about-text">
+
+            <p>
+                Advocate Md Hasan Milu provides legal representation,
+                compliance support and strategic business consultancy
+                to individuals, entrepreneurs and organizations.
+            </p>
+
+            <p>
+                His expertise includes civil litigation, criminal matters,
+                taxation, customs, VAT compliance, corporate law,
+                investment planning, property management and legal drafting.
+            </p>
+
+            <p>
+                Dedicated to delivering practical, ethical and
+                result-oriented legal solutions tailored to client needs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="services">
+
+    <div class="section-title">
+        <h2>Practice Areas</h2>
+        <p>Comprehensive Legal & Advisory Services</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>⚖ Civil Law</h3>
+            <p>Property disputes, contracts, family and civil litigation matters.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚖ Criminal Law</h3>
+            <p>Criminal case representation and legal defense support.</p>
+        </div>
+
+        <div class="card">
+            <h3>💰 Income Tax</h3>
+            <p>Tax planning, compliance and return filing services.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏛 Customs, VAT & Audit</h3>
+            <p>Professional advisory and compliance assistance.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏢 Company Law</h3>
+            <p>Company formation, compliance and corporate advisory.</p>
+        </div>
+
+        <div class="card">
+            <h3>💼 Management & Accounts</h3>
+            <p>Business planning, accounting and operational consultancy.</p>
+        </div>
+
+        <div class="card">
+            <h3>📜 Legal Drafting & Affidavit</h3>
+            <p>Contracts, deeds, agreements, affidavits and documentation.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏠 Property & Asset Evaluation</h3>
+            <p>Property management, documentation and valuation services.</p>
+        </div>
+
+        <div class="card">
+            <h3>✈ Travel & Immigration</h3>
+            <p>Guidance and consultancy for immigration and travel matters.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <h2>Contact Information</h2>
+    </div>
+
+    <div class="contact-box">
+
+        <p>
+            <strong>Office Address</strong><br>
+            75/76, Millennium Tower (14th Floor)<br>
+            Kakrail, Dhaka-1000, Bangladesh
+        </p>
+
+        <p>
+            <strong>Phone:</strong><br>
+            <a href="tel:+8801799559994">
+                01799-559994
+            </a>
+        </p>
+
+        <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:hasanmilusub@gmail.com">
+                hasanmilusub@gmail.com
+            </a>
+        </p>
+
+        <br>
+        <a href="https://wa.me/8801799559994"
+   class="whatsapp-btn"
+   target="_blank">
+   💬 WhatsApp Consultation
+</a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Advocate Md Hasan Milu | Legal & Business Advisory
+</footer>
+
+</body>
+</html>
