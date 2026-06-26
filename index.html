@@ -3,375 +3,745 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advocate Md Hasan Milu | Legal & Business Advisory</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<title>Advocate Md Hasan Milu | The Legal Source & Associates</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
+/* ─── TOKENS ─────────────────────────────────── */
+:root{
+  --ink:     #1A1410;
+  --parchment: #F7F3EC;
+  --cream:   #FFFDF9;
+  --gold:    #C09A48;
+  --gold-dk: #9B7A32;
+  --gold-lt: #F0E6CC;
+  --rule:    #D6CEBC;
+  --muted:   #6B6157;
+  --white:   #ffffff;
+  --green:   #25D366;
 }
 
-body{
-    background:#FAF8F2;
-    color:#2C2C2C;
-    line-height:1.7;
-    overflow-x:hidden;
-}
+/* ─── RESET ──────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
 
-/* NAV */
+/* ─── UTILITY ────────────────────────────────── */
+.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+.gold{color:var(--gold);}
+
+/* ─── NAV ────────────────────────────────────── */
 nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    z-index:1000;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(10px);
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+  position:fixed;top:0;left:0;width:100%;z-index:999;
+  background:rgba(255,253,249,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
 }
-
-.nav-container{
-    width:90%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
+.nav-inner{
+  max-width:1200px;margin:auto;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 5%;
 }
-
-.logo{
-    font-size:22px;
-    font-weight:700;
-    color:#3B2F2F;
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:600;
+  letter-spacing:.5px;
+  color:var(--ink);
+  display:flex;align-items:center;gap:10px;
 }
-
-.nav-links{
-    display:flex;
+.nav-logo span{
+  display:inline-block;width:28px;height:28px;
+  border-radius:50%;background:var(--gold);
+  color:#fff;font-size:13px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
 }
-
-.nav-links a{
-    text-decoration:none;
-    color:#333;
-    margin-left:25px;
-    font-weight:500;
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);letter-spacing:.3px;transition:.25s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links .btn-nav{
+  background:var(--gold);color:#fff;
+  padding:9px 22px;border-radius:6px;
+  font-size:13px;font-weight:600;
+  transition:.25s;
 }
+.nav-links .btn-nav:hover{background:var(--gold-dk);}
 
-.nav-links a:hover{
-    color:#B68D40;
-}
-
-/* HERO */
+/* ─── HERO ───────────────────────────────────── */
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    background:linear-gradient(135deg,#F8F5EE,#EEE8DC);
-    padding:120px 10% 60px;
+  min-height:100vh;
+  display:flex;align-items:center;
+  background:linear-gradient(135deg,#F0EBE0 0%,#F7F3EC 60%,#EDE6D6 100%);
+  padding:130px 5% 80px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  background-image:
+    repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(192,154,72,.07) 80px);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1200px;margin:auto;width:100%;
+  display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;
 }
 
-.hero-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:60px;
-    width:100%;
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:20px;
 }
-
-.hero-text{
-    flex:1;
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(38px,5.5vw,68px);
+  line-height:1.1;
+  color:var(--ink);
+  margin-bottom:18px;
 }
-
-.hero-text h1{
-    font-size:clamp(28px,5vw,55px);
-    color:#3B2F2F;
-    margin-bottom:10px;
+.hero h1 em{color:var(--gold);font-style:normal;}
+.hero-sub{
+  font-size:15px;color:var(--muted);
+  max-width:480px;margin-bottom:36px;line-height:1.8;
 }
-
-.hero-text h2{
-    color:#B68D40;
-    margin-bottom:20px;
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:#fff;
+  padding:14px 30px;border-radius:7px;
+  font-size:14px;font-weight:600;letter-spacing:.3px;
+  transition:.3s;
 }
-
-.hero-text p{
-    font-size:clamp(14px,2vw,18px);
-    margin-bottom:30px;
+.btn-primary:hover{background:var(--gold-dk);transform:translateY(-2px);}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1.5px solid var(--ink);color:var(--ink);
+  padding:13px 28px;border-radius:7px;
+  font-size:14px;font-weight:500;
+  transition:.3s;
 }
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
 
-.btn{
-    display:inline-block;
-    background:#B68D40;
-    color:white;
-    padding:14px 32px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
+.photo-card{
+  position:relative;
+  display:flex;align-items:flex-end;justify-content:center;
 }
-
-.btn:hover{
-    background:#9D7630;
+.photo-card::before{
+  content:'';
+  position:absolute;bottom:-18px;right:-18px;
+  width:280px;height:340px;
+  border:2px solid var(--gold);
+  border-radius:16px;
+  opacity:.4;
+  pointer-events:none;
 }
-
-.hero-image{
-    flex:1;
-    text-align:center;
+.photo-card img{
+  width:100%;max-width:380px;
+  border-radius:14px;
+  box-shadow:0 24px 60px rgba(0,0,0,.18);
+  position:relative;z-index:1;
 }
-
-.hero-image img{
-    width:100%;
-    max-width:380px;
-    border-radius:20px;
-    border:6px solid white;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+.photo-link-badge{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  z-index:2;
+  background:rgba(255,253,249,.95);
+  border:1px solid var(--rule);
+  border-radius:8px;
+  padding:10px 20px;
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;
+  color:var(--ink);
+  white-space:nowrap;
+  backdrop-filter:blur(8px);
+  box-shadow:0 4px 16px rgba(0,0,0,.1);
+  transition:.25s;
 }
+.photo-link-badge:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
+.photo-link-badge svg{flex-shrink:0;}
 
-/* SECTIONS */
-section{
-    padding:90px 10%;
+/* ─── SECTION WRAPPER ────────────────────────── */
+.section{padding:100px 5%;}
+.section-inner{max-width:1200px;margin:auto;}
+.section-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:14px;
 }
-
-/* TITLE */
+.section-label::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
 .section-title{
-    text-align:center;
-    margin-bottom:50px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(30px,4vw,50px);
+  color:var(--ink);line-height:1.15;
+  margin-bottom:50px;
 }
 
-.section-title h2{
-    font-size:clamp(24px,4vw,40px);
-    color:#3B2F2F;
+/* ─── ABOUT ──────────────────────────────────── */
+.about-bg{background:var(--parchment);}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;
+}
+.about-body{font-size:15px;color:var(--muted);margin-bottom:22px;line-height:1.9;}
+
+/* ── improved checklist ── */
+.checklist{
+  list-style:none;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;
+  margin-bottom:36px;
+  border:1px solid var(--rule);
+  border-radius:10px;
+  overflow:hidden;
+}
+.checklist li{
+  font-size:13px;font-weight:500;
+  display:flex;align-items:center;gap:10px;
+  color:var(--ink);
+  padding:11px 16px;
+  border-bottom:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+  background:var(--cream);
+  transition:.2s;
+}
+.checklist li:nth-child(even){border-right:0;}
+.checklist li:nth-last-child(-n+2){border-bottom:0;}
+.checklist li:hover{background:var(--gold-lt);}
+.checklist li .check-dot{
+  flex-shrink:0;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--gold-lt);
+  display:flex;align-items:center;justify-content:center;
+}
+.checklist li .check-dot::after{
+  content:'';
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);
+  display:block;
 }
 
-/* ABOUT */
-.about-content{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:40px;
-    align-items:center;
+/* ── about right panel ── */
+.about-right{display:flex;flex-direction:column;gap:24px;}
+
+/* profile badge */
+.profile-badge{
+  display:flex;align-items:center;gap:16px;
+  background:var(--cream);
+  border:1px solid var(--rule);
+  border-radius:12px;
+  padding:20px 22px;
+}
+.profile-badge-avatar{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+  color:#fff;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+}
+.profile-badge-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:600;color:var(--ink);
+  line-height:1.2;
+}
+.profile-badge-role{font-size:12px;color:var(--muted);margin-top:2px;}
+.profile-badge-bar{
+  display:inline-flex;align-items:center;gap:5px;
+  margin-top:6px;
+  background:var(--gold-lt);
+  border-radius:4px;
+  padding:3px 8px;
+  font-size:11px;font-weight:600;color:var(--gold-dk);
 }
 
-.about-content img{
-    width:100%;
-    border-radius:15px;
+/* stats */
+.about-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  background:var(--rule);border-radius:10px;overflow:hidden;
 }
-
-/* SERVICES */
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+.stat-cell{
+  background:var(--cream);padding:24px 16px;text-align:center;
+  transition:.25s;
 }
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
-    transition:.3s;
+.stat-cell:hover{background:var(--gold);color:#fff;}
+.stat-cell:hover .stat-num,.stat-cell:hover .stat-lbl{color:#fff;}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;font-weight:600;color:var(--gold);
+  line-height:1;transition:.25s;
 }
+.stat-lbl{font-size:11px;color:var(--muted);margin-top:5px;font-weight:500;transition:.25s;}
 
-.card:hover{
-    transform:translateY(-6px);
+/* highlights strip */
+.highlights{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  background:var(--rule);border-radius:10px;overflow:hidden;
 }
-
-/* CONTACT */
-.contact{
-    background:#F3EEE4;
+.highlight-cell{
+  background:var(--cream);
+  padding:18px 20px;
+  border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
 }
+.highlight-cell:nth-child(even){border-right:0;}
+.highlight-cell:nth-last-child(-n+2){border-bottom:0;}
+.highlight-icon{font-size:20px;margin-bottom:6px;display:block;}
+.highlight-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.highlight-desc{font-size:12px;color:var(--muted);line-height:1.5;}
 
-.contact-box{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
+/* ─── SERVICES ───────────────────────────────── */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:16px;
 }
-
-.contact-box p{
-    margin:12px 0;
-    font-size:16px;
+.service-card{
+  background:var(--cream);
+  border:1px solid var(--rule);
+  border-radius:12px;
+  padding:28px 24px;
+  transition:.3s;
+  cursor:default;
+  position:relative;
+  overflow:hidden;
 }
-
-.contact-box a{
-    color:#B68D40;
-    text-decoration:none;
-    font-weight:600;
+.service-card::after{
+  content:'';
+  position:absolute;bottom:0;left:0;width:0;height:2px;
+  background:var(--gold);
+  transition:.35s;
 }
-
-/* WHATSAPP */
-.whatsapp-btn{
-    display:inline-block;
-    background:#25D366;
-    color:#fff;
-    padding:15px 30px;
-    border-radius:8px;
-    font-weight:600;
-    transition:0.3s;
+.service-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 10px 30px rgba(192,154,72,.1);}
+.service-card:hover::after{width:100%;}
+.card-icon{font-size:24px;margin-bottom:12px;display:block;}
+.service-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px;font-weight:600;
+  color:var(--ink);margin-bottom:6px;
 }
+.service-card p{font-size:13px;color:var(--muted);line-height:1.7;}
 
-.whatsapp-btn:hover{
-    background:#1EBE5D;
-    transform:translateY(-2px);
+/* ─── WHY ────────────────────────────────────── */
+.why-bg{background:var(--parchment);}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--rule);border-radius:14px;overflow:hidden;}
+.why-cell{background:var(--cream);padding:38px 28px;transition:.25s;}
+.why-cell:hover{background:var(--gold);color:#fff;}
+.why-cell:hover .why-num,.why-cell:hover .why-title,.why-cell:hover .why-body{color:#fff;}
+.why-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;font-weight:600;color:var(--rule);
+  line-height:1;margin-bottom:14px;transition:.25s;
 }
+.why-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px;transition:.25s;}
+.why-body{font-size:13px;color:var(--muted);line-height:1.7;transition:.25s;}
 
-/* FOOTER */
+/* ─── CONTACT ────────────────────────────────── */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;
+}
+.contact-left h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,3.5vw,44px);
+  color:var(--ink);margin-bottom:18px;
+}
+.contact-left p{font-size:15px;color:var(--muted);margin-bottom:30px;line-height:1.9;}
+.contact-detail{
+  display:flex;gap:16px;align-items:flex-start;
+  margin-bottom:24px;
+}
+.detail-icon{
+  width:42px;height:42px;border-radius:8px;
+  background:var(--parchment);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:18px;
+}
+.detail-label{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
+.detail-value{font-size:15px;color:var(--ink);}
+.detail-value a{color:var(--ink);font-weight:500;transition:.2s;}
+.detail-value a:hover{color:var(--gold);}
+
+/* ── map ── */
+.map-wrap{
+  border-radius:12px;overflow:hidden;
+  border:1px solid var(--rule);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+  margin-bottom:28px;
+}
+.map-wrap iframe{display:block;}
+
+/* link buttons on right */
+.contact-links{
+  background:var(--ink);
+  border-radius:14px;
+  padding:38px 32px;
+}
+.contact-links h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;color:#fff;margin-bottom:22px;
+}
+.link-btn{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
+  border-radius:8px;padding:14px 18px;
+  margin-bottom:10px;
+  font-size:14px;font-weight:500;
+  transition:.25s;
+}
+.link-btn:hover{background:var(--gold);border-color:var(--gold);}
+.link-btn svg{flex-shrink:0;opacity:.7;}
+.link-btn:hover svg{opacity:1;}
+.wa-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:#25D366;color:#fff;
+  border-radius:8px;padding:16px 18px;
+  font-size:15px;font-weight:600;
+  margin-top:18px;
+  transition:.25s;
+  border:none;
+}
+.wa-btn:hover{background:#1EBE5D;transform:translateY(-2px);}
+
+/* ─── FOOTER ──────────────────────────────────── */
 footer{
-    background:#3B2F2F;
-    color:white;
-    text-align:center;
-    padding:25px;
+  background:var(--ink);color:rgba(255,255,255,.6);
+  padding:40px 5%;text-align:center;
+  font-size:13px;
 }
-
-/* MOBILE */
-@media(max-width:768px){
-
-    section{
-        padding:70px 6%;
-    }
-
-    .hero{
-        padding:110px 6% 50px;
-        text-align:center;
-    }
-
-    .hero-content{
-        flex-direction:column;
-        gap:30px;
-    }
-
-    .about-content{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .logo{
-        font-size:18px;
-    }
+footer strong{color:#fff;}
+footer .footer-row{
+  display:flex;justify-content:center;gap:28px;
+  flex-wrap:wrap;margin-top:16px;
 }
+footer .footer-row a{color:rgba(255,255,255,.5);font-size:13px;transition:.2s;}
+footer .footer-row a:hover{color:var(--gold);}
 
-@media(max-width:480px){
-    .btn{
-        padding:12px 22px;
-        font-size:14px;
-    }
-
-    .card{
-        padding:20px;
-    }
+/* ─── FLOATING WA ────────────────────────────── */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:900;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(37,211,102,.4);
+  transition:.3s;
 }
+.wa-float:hover{transform:scale(1.1);}
 
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media(max-width:1024px){
+  .why-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;}
+  .hero-sub{margin:0 auto 36px;}
+  .hero-ctas{justify-content:center;}
+  .photo-card{justify-content:center;margin-top:10px;}
+  .photo-card::before{display:none;}
+  .about-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .checklist{grid-template-columns:1fr;}
+  .checklist li:nth-child(even){border-right:1px solid var(--rule);}
+  .checklist li:nth-last-child(-n+2){border-bottom:1px solid var(--rule);}
+  .checklist li:last-child{border-bottom:0;}
+  .highlights{grid-template-columns:1fr 1fr;}
+  .eyebrow{justify-content:center;}
+}
+@media(max-width:600px){
+  .nav-links{display:none;}
+  .why-grid{grid-template-columns:1fr;}
+  .about-stats{grid-template-columns:repeat(3,1fr);}
+  .highlights{grid-template-columns:1fr;}
+  .highlight-cell:nth-child(even){border-right:0;}
+  .section{padding:70px 5%;}
+}
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
+<!-- ── NAV ── -->
 <nav>
-    <div class="nav-container">
-        <div class="logo">Advocate Hasan Milu</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Practice Areas</a>
-            <a href="#contact">Contact</a>
-        </div>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span>⚖</span> The Legal Source
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
     </div>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-
-        <div class="hero-image">
-            <img src="hasan-milu.jpg" alt="Advocate Md Hasan Milu">
-        </div>
-        <div class="hero-text">
-            <h1>Advocate Md Hasan Milu</h1>
-            <h2>Consultant | Legal & Business Advisory</h2>
-
-            <p>
-                Trusted legal and business advisor providing professional
-                solutions in Civil Law, Criminal Law, Income Tax,
-                Customs, VAT, Audit, Company Law, Property Management,
-                Legal Drafting, Immigration and Business Consultancy.
-            </p>
-
-            <a href="#contact" class="btn">Book Consultation</a>
-        </div>
-
-
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">Legal & Business Advisory · Dhaka</div>
+      <h1>Advocate<br><em>Md Hasan Milu</em></h1>
+      <p class="hero-sub">
+        Founder of The Legal Source & Associates — providing comprehensive legal, corporate and compliance solutions for individuals, startups, SMEs and corporate organisations across Bangladesh.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          Book a Consultation
+        </a>
+        <a href="#services" class="btn-outline">
+          View Practice Areas
+        </a>
+      </div>
     </div>
+
+    <div class="photo-card">
+      <img src="hasan-milu.jpg" alt="Advocate Md Hasan Milu — Founder, The Legal Source & Associates">
+      <a href="https://dhakabarassociation.com/site/member-details/25472" target="_blank" class="photo-link-badge">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        View Bar Association Profile
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="section-title">
-        <h2>About Advocate Hasan Milu</h2>
-    </div>
+<!-- ── ABOUT ── -->
+<section class="section about-bg" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
 
-    <div class="about-content">
+      <!-- Left -->
+      <div>
+        <div class="section-label">About the Firm</div>
+        <h2 class="section-title serif">The Legal Source<br>& Associates</h2>
+        <p class="about-body">
+          Advocate Md Hasan Milu is the Founder and Team Leader of The Legal Source & Associates, a multidisciplinary legal and corporate consultancy firm based in Dhaka. The firm serves startups, SMEs, NGOs and multinational companies with practical, result-oriented legal solutions.
+        </p>
+        <p class="about-body">
+          With extensive experience in litigation, corporate governance, company law and regulatory compliance, the firm is committed to delivering ethical, confidential and timely counsel.
+        </p>
 
-        <div>
-            <p>Advocate Md Hasan Milu provides legal representation and business consultancy.</p>
-            <p>Expert in civil, criminal, tax, VAT, customs and corporate law.</p>
-            <p>Focused on ethical, practical and result-oriented solutions.</p>
+        <ul class="checklist">
+          <li><span class="check-dot"></span>Corporate & Commercial Law</li>
+          <li><span class="check-dot"></span>Civil & Criminal Litigation</li>
+          <li><span class="check-dot"></span>Income Tax, VAT & Customs</li>
+          <li><span class="check-dot"></span>Company Registration (RJSC)</li>
+          <li><span class="check-dot"></span>Labour Law Compliance</li>
+          <li><span class="check-dot"></span>Trademark, Patent & Copyright</li>
+          <li><span class="check-dot"></span>Contract Drafting & Vetting</li>
+          <li><span class="check-dot"></span>Arbitration & Mediation</li>
+          <li><span class="check-dot"></span>Business Consultancy</li>
+          <li><span class="check-dot"></span>Regulatory Approvals (BIDA)</li>
+        </ul>
+      </div>
+
+      <!-- Right -->
+      <div class="about-right">
+
+        <!-- Profile badge -->
+        <div class="profile-badge">
+          <div class="profile-badge-avatar">M</div>
+          <div>
+            <div class="profile-badge-name">Advocate Md Hasan Milu</div>
+            <div class="profile-badge-role">Founder & Managing Partner</div>
+            <div class="profile-badge-bar">
+              <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Dhaka Bar Association · Enrolled Advocate
+            </div>
+          </div>
         </div>
+
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="stat-cell">
+            <div class="stat-num">60+</div>
+            <div class="stat-lbl">Corporate Clients</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">1K+</div>
+            <div class="stat-lbl">Documents Filed</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Commitment</div>
+          </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="highlights">
+          <div class="highlight-cell">
+            <span class="highlight-icon">⚖️</span>
+            <div class="highlight-title">Court Representation</div>
+            <div class="highlight-desc">Civil, criminal & appellate courts across Dhaka.</div>
+          </div>
+          <div class="highlight-cell">
+            <span class="highlight-icon">🏛️</span>
+            <div class="highlight-title">Regulatory Expertise</div>
+            <div class="highlight-desc">BIDA, RJSC, NBR, BTRC compliance specialists.</div>
+          </div>
+          <div class="highlight-cell">
+            <span class="highlight-icon">🤝</span>
+            <div class="highlight-title">Client-First Approach</div>
+            <div class="highlight-desc">Practical solutions tailored to your situation.</div>
+          </div>
+          <div class="highlight-cell">
+            <span class="highlight-icon">🔒</span>
+            <div class="highlight-title">Full Confidentiality</div>
+            <div class="highlight-desc">Every matter handled with complete discretion.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-    <div class="section-title">
-        <h2>Practice Areas</h2>
+<!-- ── SERVICES ── -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title serif">Practice Areas</h2>
+
+    <div class="services-grid">
+      <div class="service-card"><span class="card-icon">🏢</span><h3>Corporate Law</h3><p>Company registration, restructuring, compliance and governance.</p></div>
+      <div class="service-card"><span class="card-icon">⚖️</span><h3>Civil Litigation</h3><p>Property disputes, contracts, recovery and civil suits.</p></div>
+      <div class="service-card"><span class="card-icon">🔒</span><h3>Criminal Law</h3><p>Criminal defence, bail, appeals and legal representation.</p></div>
+      <div class="service-card"><span class="card-icon">📊</span><h3>Tax & VAT</h3><p>Income Tax, VAT, Customs, Audit and NBR compliance.</p></div>
+      <div class="service-card"><span class="card-icon">📋</span><h3>Business Licensing</h3><p>Trade License, Fire License, Environmental Clearance, IRC & ERC.</p></div>
+      <div class="service-card"><span class="card-icon">📁</span><h3>Company Registration</h3><p>RJSC registration, share transfer, AGM, EGM and annual returns.</p></div>
+      <div class="service-card"><span class="card-icon">📝</span><h3>Legal Documentation</h3><p>Contracts, MoU, NDA, Employment Agreements and Legal Notices.</p></div>
+      <div class="service-card"><span class="card-icon">™️</span><h3>Trademark & Copyright</h3><p>Trademark, Patent, Copyright and IP protection.</p></div>
+      <div class="service-card"><span class="card-icon">👷</span><h3>Labour Law</h3><p>Employment compliance, HR policies and labour advisory.</p></div>
+      <div class="service-card"><span class="card-icon">🤝</span><h3>Arbitration & Mediation</h3><p>Alternative dispute resolution and settlement support.</p></div>
+      <div class="service-card"><span class="card-icon">💼</span><h3>Corporate Consultancy</h3><p>Business planning, regulatory approvals and strategic advisory.</p></div>
+      <div class="service-card"><span class="card-icon">👨‍👩‍👧</span><h3>Family & Personal</h3><p>Family disputes, succession and personal legal matters.</p></div>
     </div>
-
-    <div class="services">
-
-        <div class="card"><h3>Civil Law</h3><p>Property disputes and contracts.</p></div>
-        <div class="card"><h3>Criminal Law</h3><p>Legal defense and representation.</p></div>
-        <div class="card"><h3>Income Tax</h3><p>Tax planning and filing.</p></div>
-        <div class="card"><h3>VAT & Customs</h3><p>Compliance and advisory.</p></div>
-        <div class="card"><h3>Company Law</h3><p>Business formation & legal support.</p></div>
-        <div class="card"><h3>Legal Drafting</h3><p>Contracts and documents.</p></div>
-
-    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <div class="section-title">
-        <h2>Contact</h2>
+<!-- ── WHY US ── -->
+<section class="section why-bg" id="why">
+  <div class="section-inner">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title serif">Built on Trust,<br>Driven by Results</h2>
+
+    <div class="why-grid">
+      <div class="why-cell">
+        <div class="why-num">60+</div>
+        <div class="why-title">Corporate Clients</div>
+        <div class="why-body">Trusted by businesses across Bangladesh for years of consistent, quality counsel.</div>
+      </div>
+      <div class="why-cell">
+        <div class="why-num">⚖</div>
+        <div class="why-title">Experienced Team</div>
+        <div class="why-body">Advocates and corporate consultants with multidisciplinary expertise across sectors.</div>
+      </div>
+      <div class="why-cell">
+        <div class="why-num">🛡</div>
+        <div class="why-title">Confidential Service</div>
+        <div class="why-body">Accurate documentation handled with complete professional confidentiality.</div>
+      </div>
+      <div class="why-cell">
+        <div class="why-num">⚡</div>
+        <div class="why-title">Fast Response</div>
+        <div class="why-body">Client-focused legal support with timely delivery and clear communication.</div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="contact-box">
+<!-- ── CONTACT ── -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
 
-        <p><strong>Address:</strong><br>
-        Millennium Tower, Kakrail, Dhaka</p>
+      <!-- Left: details + map -->
+      <div class="contact-left">
+        <div class="section-label">Get in Touch</div>
+        <h2>Ready to Discuss<br>Your Legal Matter?</h2>
+        <p>Our team provides professional, practical counsel across all areas of law. Reach out to schedule a consultation.</p>
 
-        <p><strong>Phone:</strong><br>
-        <a href="tel:+8801799559994">01799-559994</a></p>
+        <div class="contact-detail">
+          <div class="detail-icon">📍</div>
+          <div>
+            <div class="detail-label">Office</div>
+            <div class="detail-value">75-76 Millennium Tower (14th Floor)<br>Kakrail, Dhaka-1000</div>
+          </div>
+        </div>
 
-        <p><strong>Email:</strong><br>
-        <a href="mailto:hasanmilusub@gmail.com">hasanmilusub@gmail.com</a></p>
+        <div class="contact-detail">
+          <div class="detail-icon">📞</div>
+          <div>
+            <div class="detail-label">Mobile</div>
+            <div class="detail-value"><a href="tel:+8801799559994">+880 1799-559994</a></div>
+          </div>
+        </div>
 
-        <br>
+        <div class="contact-detail">
+          <div class="detail-icon">✉️</div>
+          <div>
+            <div class="detail-label">Email</div>
+            <div class="detail-value"><a href="mailto:hasanmilusub@gmail.com">hasanmilusub@gmail.com</a></div>
+          </div>
+        </div>
 
-        <a class="whatsapp-btn" href="https://wa.me/8801799559994" target="_blank">
-            WhatsApp Consultation
+        <!-- MAP -->
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=Millennium%20Tower%20Kakrail%20Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="280" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+
+      <!-- Right: link buttons -->
+      <div class="contact-links">
+        <h3>Quick Links</h3>
+
+        <a class="link-btn" href="https://www.facebook.com/LSA240" target="_blank">
+          <svg width="16" height="16" fill="#4267B2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          Facebook Page — The Legal Source
         </a>
 
+        <a class="link-btn" href="https://dhakabarassociation.com/site/member-details/25472" target="_blank">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Dhaka Bar Association Profile
+        </a>
+
+        <a class="link-btn" href="https://dtba.btla.net/membership?id=H00540&name=Md+Hasan+Milu&mobile=01799559994" target="_blank">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Dhaka Taxes Bar Membership
+        </a>
+
+        <a class="wa-btn" href="https://wa.me/8801799559994" target="_blank">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.48 2 2 6.48 2 12c0 1.999.587 3.86 1.598 5.423L2 22l4.703-1.566A9.952 9.952 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          WhatsApp Consultation
+        </a>
+      </div>
+
     </div>
+  </div>
 </section>
 
+<!-- ── FOOTER ── -->
 <footer>
-    © 2026 Advocate Md Hasan Milu | All Rights Reserved
+  <strong>Advocate Md Hasan Milu</strong> · Founder & Managing Partner · The Legal Source & Associates<br>
+  <small style="opacity:.5;margin-top:6px;display:block;">⚖ Civil · Criminal · Tax · VAT · RJSC · Corporate · Compliance · Business Consultancy</small>
+  <div class="footer-row">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div style="margin-top:20px;opacity:.4;font-size:12px;">© 2026 The Legal Source & Associates. All Rights Reserved.</div>
 </footer>
+
+<!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/8801799559994" target="_blank" class="wa-float" title="WhatsApp">
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.48 2 2 6.48 2 12c0 1.999.587 3.86 1.598 5.423L2 22l4.703-1.566A9.952 9.952 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+</a>
 
 </body>
 </html>
